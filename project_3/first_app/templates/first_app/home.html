@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>This is Home Page</h1>
+    <h2> Author: {{ author }} </h2>
+    <h2> Age: {{ age }} </h2>
+    <h2> List: {{ lst }} </h2>
+
+    <!-- Template Filtering -->
+    <h2> {{ strList | join:" - " }} </h2>
+    <h2> {{ date | date:"D d M Y" }} </h2>
+
+    <!-- Conditional Statement -->
+    {% if age >= 20 %}
+        <h4>Get driving license</h4>
+    {% elif age >= 10 and age <= 19 %}
+        <h4>Not get driving license</h4>
+    {% else %}
+        <h4>You're a child</h4>
+    {% endif %}
+
+
+    <!-- For loop -->
+    {% for i in courses %}
+        <h3> {{i.id}} - {{i.name}} - {{i.fee}} </h3> 
+    {% endfor %}
+</body>
+</html>
