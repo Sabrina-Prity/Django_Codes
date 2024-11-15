@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Loop through the meals -->
+<div class="meals-row">
+    {% for i in meals %}
+    <div class="meal-container">
+        <img class="meal-img" src="{{ i.strMealThumb }}" alt="{{ i.strMeal }}">
+        <div class="meal-details">
+            <h2>Meal_id : {{ i.idMeal }}</h2>
+            <h1>Title : {{ i.strMeal }}</h1>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

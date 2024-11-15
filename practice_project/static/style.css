@@ -1,0 +1,45 @@
+.meals-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px; 
+    padding: 10px; 
+}
+
+.meal-container {
+    width: 20%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.meal-img {
+    width: 100%;
+    height: auto; 
+    border-radius: 8px;
+}
+
+.meal-details {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.meal-details h1 {
+    font-size: 20px;
+    color: #3b3737;
+}
+
+.meal-details h2 {
+    font-size: 20px;
+    color: #777;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    .meal-container {
+        width: 30%; 
+    }
+}
+
