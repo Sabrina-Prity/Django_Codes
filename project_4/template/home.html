@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is home Page</h1>
+    <!-- <img src="static/image1.jpg" alt="Bird 1 Picture"> -->
+
+    <!-- Best approach to use static folder... 
+        1. load static at the top of the html 
+        2. In src="{% static 'image_Name' %}"-->
+    
+    <img src="{% static 'image1.jpg' %}" alt="">
+    <br>
+    <!-- <img src="static/image2.jpg" alt="Bird 2 Picture"> -->
+     <img src="{% static 'image2.jpg' %}" alt="">
+</body>
+</html>

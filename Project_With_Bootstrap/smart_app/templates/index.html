@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">UserId</th>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Body</th>
+        </tr>
+    </thead>
+
+    <!-- Make a for loop to access backed data -->
+    {% for i in data %}
+    <tbody>
+        <tr>
+            <th scope="row">{{i.userId}}</th>
+            <td>{{i.id}}</td>
+            <td>{{i.title}}</td>
+            <td>{{i.body}}</td>
+        </tr>
+    </tbody>
+    {% endfor %}
+</table>
+
+{% endblock %}
