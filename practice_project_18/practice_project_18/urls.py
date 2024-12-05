@@ -5,4 +5,5 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name = 'homepage'),
+    path('add/', include("authentication_app.urls")),
 ]

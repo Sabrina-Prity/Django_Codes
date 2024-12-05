@@ -1,7 +1,8 @@
 from django.contrib.auth.models import User
 from django import forms
+from django.contrib.auth.forms import UserCreationForm
 
-class RegistrationForm(forms.ModelForm):
+class RegistrationForm(UserCreationForm):
     first_name = forms.CharField(widget=forms.TextInput(attrs={'id':'required'}))
     last_name = forms.CharField(widget=forms.TextInput(attrs={'id':'required'}))
     email = forms.EmailField(widget=forms.EmailInput(attrs={'id':'required'}))
